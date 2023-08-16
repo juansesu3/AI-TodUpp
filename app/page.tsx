@@ -1,3 +1,4 @@
+import Board from "@/components/Board";
 import Header from "@/components/Header";
 
 import React from "react";
@@ -7,7 +8,8 @@ const Home = () => {
     <main>
       {/*Header */}
       <Header />
-      <h1>Hello Mr. Juan</h1>
+     
+      <Board/>
 
       {/*Board*/}
     </main>
