@@ -64,12 +64,12 @@ const Header = () => {
           <Avatar name="Juan Suarez" round color="#0055D1" size="50" />
         </div>
       </div>
-      <div className="flex items-center justify-center px-5 py-2 md:py-5 ">
+      <div className="flex  items-center justify-center px-5 py-2 md:py-5 ">
         <p
-          className="flex items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit
+          className="flex flex-col items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit
          bg-white italic max-w-3xl text-[#0055D1]"
         >
-          <CpuChipIcon
+               <CpuChipIcon
             className={`inline-block h-10 w-10 text-[#0055D1] mr-1
           ${loading && "animate-spin"}
           `}
@@ -78,6 +78,7 @@ const Header = () => {
             ? suggestion
             : " GPT is summarising your task for the day..."}
         </p>
+  
       </div>
     </header>
   );
