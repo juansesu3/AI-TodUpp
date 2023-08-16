@@ -24,7 +24,7 @@ export const POST = async (request: Request) => {
       {
         role: "user",
         content: `Hi there, provide of the following todos. Count how many todos are in each category 
-        such as To Do, in progress and done, then the user to have a productive day! Here's the data: ${JSON.stringify(
+        such as To Do, in progress and done, and give the user a little advice to be productive in their day! Here's the data: ${JSON.stringify(
           todos
         )}`,
       },
@@ -32,9 +32,6 @@ export const POST = async (request: Request) => {
   });
 
   const {data} = response;
-
-  console.log("DATA IS: ", data);
-  console.log(data.choices[0].message);
 
   return NextResponse.json(data.choices[0].message)
 };
