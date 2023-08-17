@@ -37,7 +37,7 @@ const Header = () => {
          from-pink-400 to-[#0055D1] rounded-md blur-3xl opacity-50 -z-50"
         />
         <Image
-          src={"https://links.papareact.com/c2cdd5"}
+          src={"https://juan-sesu-ecommerce.s3.amazonaws.com/1692285629297.png"}
           alt="Trello logo"
           width={300}
           height={100}

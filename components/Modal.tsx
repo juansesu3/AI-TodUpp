@@ -90,6 +90,7 @@ const Modal = () => {
 
                 {/* RadioGroup */}
                 <TaskTypeRadioGroup />
+                {/*
                 <div className="mt-2">
                   <button
                     type="button"
@@ -125,7 +126,7 @@ const Modal = () => {
                       setImage(e.target.files![0]);
                     }}
                   />
-                </div>
+                </div>*/}
                 <div>
                   <button
                     type="submit"
