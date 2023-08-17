@@ -6,8 +6,7 @@ export const getTodosGroupeByColumn = async () => {
         process.env.NEXT_PUBLIC_TODOS_COLLECTION_ID!
     );
     const todos = data.documents;
-
-
+// @ts-ignore
     const columns = todos.reduce((acc, todo) => {
         if (!acc.get(todo.status)) {
             acc.set(todo.status, {
@@ -43,11 +42,14 @@ export const getTodosGroupeByColumn = async () => {
 
     // sort columns by columnsTypes
     const sortedColumns = new Map(
+        // @ts-ignore
         Array.from(columns.entries()).sort((a, b) =>
+        // @ts-ignore
             columnTypes.indexOf(a[0]) - columnTypes.indexOf(b[0])
         )
     );
     const board: Board={
+        // @ts-ignore
         columns:sortedColumns
     } 
     return board;

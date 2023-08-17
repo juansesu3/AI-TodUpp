@@ -28,7 +28,7 @@ const TodoCard = ({
 }: Props) => {
   const deleteTask = useBoardStore((state) => state.deleteTask);
   const [imageUrl, setImageUrl] = useState<string | null>(null);
-
+/*/
   useEffect(() => {
     if (todo.image) {
       const fetchImage = async () => {
@@ -40,7 +40,7 @@ const TodoCard = ({
       fetchImage();
     }
   }, [todo]);
-
+*/
   return (
     <div
       className="bg-white rounded-md space-y-2 mt-2 drop-shadow-md"
