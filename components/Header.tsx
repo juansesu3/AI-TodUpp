@@ -2,10 +2,9 @@
 import fetchSuggestion from "@/lib/fetchSuggestion";
 import { useBoardStore } from "@/store/BoardStore";
 import { CpuChipIcon, MagnifyingGlassIcon } from "@heroicons/react/20/solid";
-import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import Avatar from "react-avatar";
+//import Avatar from "react-avatar";
 
 const Header = () => {
   const [board, searchString, setSearchString] = useBoardStore((state) => [
@@ -34,15 +33,17 @@ const Header = () => {
       <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
         <div
           className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br
-         from-pink-400 to-[#0055D1] rounded-md blur-3xl opacity-50 -z-50"
+         from-[#b5e6ff] to-[#00aaff] rounded-md blur-3xl opacity-50 -z-50"
         />
+        <div className="w-20">
         <Image
-          src={"https://juan-sesu-ecommerce.s3.amazonaws.com/1692285629297.png"}
+          src={"https://juan-sesu-ecommerce.s3.amazonaws.com/1693337012632.png"}
           alt="Trello logo"
-          width={300}
+          width={200}
           height={100}
-          className="w-44 md:w-56 pb-10 md:pb-0 object-contain"
+          className="w-full md:w-56 pb-6 md:pb-0 object-contain"
         />
+        </div>
         <div className="flex items-center space-x-5 flex-1 justify-end w-full">
           {/*Search Box */}
           <form
@@ -60,8 +61,8 @@ const Header = () => {
             <button hidden>Search</button>
           </form>
 
-          {/*Avatar */}
-          <Avatar name="Juan Suarez" round color="#0055D1" size="50" />
+          {/*Avatar 
+          <Avatar name="Juan Suarez" round color="#0055D1" size="50" />*/}
         </div>
       </div>
       <div className="flex  items-center justify-center px-5 py-2 md:py-5 ">
@@ -69,7 +70,7 @@ const Header = () => {
           className="flex flex-col items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit
          bg-white italic max-w-3xl text-[#0055D1]"
         >
-               <CpuChipIcon
+          <CpuChipIcon
             className={`inline-block h-10 w-10 text-[#0055D1] mr-1
           ${loading && "animate-spin"}
           `}
@@ -78,7 +79,6 @@ const Header = () => {
             ? suggestion
             : " GPT is summarising your task for the day..."}
         </p>
-  
       </div>
     </header>
   );

@@ -43,6 +43,7 @@ const TodoCard = ({
 */
   return (
     <div
+    
       className="bg-white rounded-md space-y-2 mt-2 drop-shadow-md"
       {...draggleProps}
       {...draggleHandleProps}
