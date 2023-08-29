@@ -30,10 +30,9 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex flex-col md:flex-row items-center p-5 bg-gray-500/10 rounded-b-2xl">
+      <div className="flex flex-col md:flex-row items-center p-5 shadow-md bg-gray-900/10 rounded-b-2xl">
         <div
-          className="absolute top-0 left-0 w-full h-96 bg-gradient-to-br
-         from-[#b5e6ff] to-[#00aaff] rounded-md blur-3xl opacity-50 -z-50"
+          className="absolute top-0 left-0 w-full h-96 rounded-md blur-3xl opacity-50 -z-50"
         />
         <div className="w-20">
         <Image
@@ -67,11 +66,11 @@ const Header = () => {
       </div>
       <div className="flex  items-center justify-center px-5 py-2 md:py-5 ">
         <p
-          className="flex flex-col items-center p-5 text-sm font-light pr-5 shadow-xl rounded-xl w-fit
+          className="flex flex-col items-center p-5 text-sm font-medium pr-5 shadow-md rounded-xl w-fit
          bg-white italic max-w-3xl text-[#0055D1]"
         >
           <CpuChipIcon
-            className={`inline-block h-10 w-10 text-[#0055D1] mr-1
+            className={`inline-block h-10 w-10 text-[#50baf1] mr-1
           ${loading && "animate-spin"}
           `}
           />
